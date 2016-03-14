@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dialog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Steps>
+    <DialogStep Num="0" Question="ns gbljh&amp;" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="1" Response="NET" />
+        <DialogResponse Next="1" Response="DA" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="1" Question="PIDORA OTVET" Help="" Error="Неверный формат ввода">
+      <Responses />
+    </DialogStep>
+  </Steps>
+</Dialog>

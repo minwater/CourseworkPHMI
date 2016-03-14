@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dialog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" FormalModel="GameTheory">
+  <Steps>
+    <DialogStep Num="1" Question="Какие виды тестирования нужно использовать?" Help="Виды проклассифицированы по объекту тестирования." Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="Функциональное" />
+        <DialogResponse Next="0" Response="Тестриование производительонсти" />
+        <DialogResponse Next="0" Response="Конфигурационное" />
+        <DialogResponse Next="0" Response="Юзабилити" />
+        <DialogResponse Next="0" Response="Тестирование интерфейса" />
+        <DialogResponse Next="0" Response="Тестриование безопасности" />
+        <DialogResponse Next="0" Response="Тестирование локализации" />
+        <DialogResponse Next="0" Response="Тестриование совместимости" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="2" Question="Добавить дополнительные тип тестриования?" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="1" Response="Да" />
+        <DialogResponse Next="3" Response="Нет" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="3" Question="Какие виды тестирования использовать?" Help="Виды проклассифицированы по знанию системы." Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="Тестирование черного ящика" />
+        <DialogResponse Next="0" Response="Тестирование белого ящика" />
+        <DialogResponse Next="0" Response="Тестирование серого ящика" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="4" Question="Добавить еще?" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="3" Response="Да" />
+        <DialogResponse Next="5" Response="Нет" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="5" Question="Выберите типы тестирования по степени автоматизации" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="Ручное тестирование" />
+        <DialogResponse Next="0" Response="Автоматизированное тестирование" />
+        <DialogResponse Next="0" Response="Полуавтоматизированное тестирование" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="6" Question="Выберите тип тестирования по степени изолированности компонентов" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="Модульное тестирование" />
+        <DialogResponse Next="0" Response="Интеграционное тестирование" />
+        <DialogResponse Next="0" Response="Системное тестирование" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="7" Question="Выберите тип тестирования по времени" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="Альфа-тестирование" />
+        <DialogResponse Next="0" Response="Бета-тестирование" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="8" Question="Выберите тип тестирования по признаку позитивности сценариев" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="Позитивное тестирование" />
+        <DialogResponse Next="0" Response="Негативное тестирование" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="9" Question="Каким образом производить тестирование?" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="По документации" />
+        <DialogResponse Next="0" Response="Интуитивно" />
+      </Responses>
+    </DialogStep>
+  </Steps>
+</Dialog>

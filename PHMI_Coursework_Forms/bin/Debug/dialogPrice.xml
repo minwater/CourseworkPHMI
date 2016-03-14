@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dialog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Steps>
+    <DialogStep Num="1" Question="Использовать своих сотрудников или привлекать их извне?" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="Своих" />
+        <DialogResponse Next="0" Response="Аутсорс" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="2" Question="Каков примерный размер штата?" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="1 человек" />
+        <DialogResponse Next="0" Response="до 5 человек" />
+        <DialogResponse Next="0" Response="до 20 человек" />
+        <DialogResponse Next="0" Response="до 100 человек" />
+        <DialogResponse Next="0" Response="Больше 100 человек" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="3" Question="Введите необходимую квалификацию сотрудников" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="Школьники" />
+        <DialogResponse Next="0" Response="Студенты" />
+        <DialogResponse Next="0" Response="Начинающие" />
+        <DialogResponse Next="0" Response="Опытные" />
+        <DialogResponse Next="0" Response="Профессионалы" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="4" Question="Выберите способ оплаты труда" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="Единичная оплата" />
+        <DialogResponse Next="0" Response="Почасовая оплата" />
+        <DialogResponse Next="0" Response="Ежемесячная оплата" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="5" Question="Выберите приоритет в разработке" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="Скорость" />
+        <DialogResponse Next="0" Response="Качество" />
+      </Responses>
+    </DialogStep>
+    <DialogStep Num="6" Question="Средства разработки какого уровня нужно использовать?" Help="" Error="Неверный формат ввода">
+      <Responses>
+        <DialogResponse Next="0" Response="Профессиональные" />
+        <DialogResponse Next="0" Response="Стандартные" />
+        <DialogResponse Next="0" Response="Для предприятий" />
+      </Responses>
+    </DialogStep>
+  </Steps>
+</Dialog>

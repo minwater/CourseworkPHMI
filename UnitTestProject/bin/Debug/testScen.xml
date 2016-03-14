@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dialog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Steps>
+    <DialogStep Num="1" Question="What">
+      <Responses>
+        <DialogResponse Next="0" Response="OK">
+          <InnerDialog FormalModel="GameTheory">
+            <Steps>
+              <DialogStep Num="1" Question="What?">
+                <Responses>
+                  <DialogResponse Next="2" Response="OK" />
+                </Responses>
+              </DialogStep>
+              <DialogStep Num="2" Question="Finish">
+                <Responses>
+                  <DialogResponse Next="3" Response="OK" />
+                </Responses>
+              </DialogStep>
+            </Steps>
+          </InnerDialog>
+        </DialogResponse>
+      </Responses>
+    </DialogStep>
+  </Steps>
+</Dialog>
