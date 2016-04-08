@@ -45,9 +45,8 @@ namespace PHMI_Coursework_Forms
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            OnResponseReceived();
             listBoxProtocol.Items.Add("Пользователь: " + textBoxResponse.Text);
-
+            OnResponseReceived();
         }
 
         private void OnResponseReceived()
@@ -75,10 +74,10 @@ namespace PHMI_Coursework_Forms
             MessageBox.Show("Ошибка чтения файла", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public void UpdateInfo(string question, string help, DialogResponse[] responses)
+        public void UpdateInfo(string nextQuestion, string help, DialogResponse[] responses)
         {
             textBoxResponse.Text = string.Empty;
-            labelQuestion.Text = question;
+            labelQuestion.Text = nextQuestion;
             labelHelp.Text = help;
 
             listBoxProtocol.Items.Add("Система: " + labelQuestion.Text);

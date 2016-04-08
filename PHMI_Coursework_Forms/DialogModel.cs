@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PHMI_Coursework_Forms
 {
-    class DialogCreatorModel
+    class DialogModel
     {
     }
 }

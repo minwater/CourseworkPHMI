@@ -9,9 +9,7 @@ namespace PHMI_Coursework_Forms
     public class DialogCreatorPresenter
     {
         private DialogCreator creatorView;
-        private Dialog dialog = new Dialog();
-        private List<DialogStep> steps = new List<DialogStep>();
-        private List<DialogResponse> additionalResponses = new List<DialogResponse>();
+        private DialogCreatorModel creatorModel;
 
         public event DialogCreatedEventHandler DialogCreated;
         
@@ -19,24 +17,24 @@ namespace PHMI_Coursework_Forms
         {
             this.creatorView = new DialogCreator(this);
             this.creatorView.Show();
+            this.creatorModel = new DialogCreatorModel();
         }
 
-        private DialogResponse[] GetResponses(Dictionary<string, string> responses)
+        public void AddStep(string num, string question, Dictionary<string, string> responses, string help, string error)
+        {
+            var step = new DialogStep() { Num = int.Parse(num), Question = question, Help = help, Error = error, Responses = GenerateResponses(responses) };
+            creatorModel.AddStep(step);
+            creatorView.AddInfoToResponsesTable(step.Num.ToString(), step.Question, step.Help, step.Error, step.Responses.Select((r) => r.Response).ToList());
+            creatorView.ClearAddingGroupBox();
+        }
+
+        private DialogResponse[] GenerateResponses(Dictionary<string, string> responses)
         {
             List<DialogResponse> responsesList = new List<DialogResponse>();
             foreach (var response in responses)
                 responsesList.Add(new DialogResponse() { Response = response.Key, Next = int.Parse(response.Value) });
             responsesList.AddRange(additionalResponses);
             return responsesList.ToArray();
-        }
-
-        public void AddStep(string num, string question, Dictionary<string, string> responses, string help, string error)
-        {
-            var step = new DialogStep() { Num = int.Parse(num), Question = question, Help = help, Error = error, Responses = GetResponses(responses) };
-            steps.Add(step);
-            creatorView.AddInfoToResponsesTable(step.Num.ToString(), step.Question, step.Help, step.Error, step.Responses.Select((r) => r.Response).ToList());
-            creatorView.ClearAddingGroupBox();
-            additionalResponses = new List<DialogResponse>();
         }
 
         public void EditStep(string num)
@@ -78,13 +76,13 @@ namespace PHMI_Coursework_Forms
         public void SaveDialog(string path)
         {
             dialog.Steps = steps.ToArray();
-            dialog.SaveToFile(path);
+            creatorModel.SaveToFile(dialog, path);
         }
 
         public void OpenDialog(string path)
         {
             creatorView.ClearControls();
-            dialog = Dialog.ReadFromFile(path);
+            dialog = creatorModel.ReadFromFile(path);
             steps = dialog.Steps.ToList();
             additionalResponses = new List<DialogResponse>();
 
