@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PHMI_Coursework_Forms.BasicModel">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAAAAAAAAAgAAAAAAAQAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>FormalModels\BasicModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PHMI_Coursework_Forms.GameTheoryModel">
+    <Position X="3.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEIAAAACAAAAAAAAAAgAAAAAAAQAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>FormalModels\GameTheoryModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PHMI_Coursework_Forms.FormalModel">
+    <Position X="2" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>FormalModels\FormalModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PHMI_Coursework_Forms.DialogStep">
+    <Position X="11.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAABIAQAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>DialogElements\DialogStep.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Responses" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PHMI_Coursework_Forms.DialogResponse">
+    <Position X="11.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAABABAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>DialogElements\DialogResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PHMI_Coursework_Forms.Dialog">
+    <Position X="11.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>DialogElements\Dialog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Steps" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PHMI_Coursework_Forms.DialogPresenter">
+    <Position X="2.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAQAAAEAIAAAAAAAAAAAAAAAAAAAAAgAAgAAIAEA=</HashCode>
+      <FileName>DialogPresenter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dialogView" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="models" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PHMI_Coursework_Forms.DialogXmlProvider" Collapsed="true">
+    <Position X="11.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DialogElements\DialogXmlProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PHMI_Coursework_Forms.DialogForm" Collapsed="true">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAkAlGAQABBUAhCgAAQiAAAgAyAJAAAIQAkAgAQ=</HashCode>
+      <FileName>DialogForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PHMI_Coursework_Forms.DialogCreatorPresenter">
+    <Position X="8" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAICAAAAAAAAIAAAAAAAAIAAAAIAAEhBAAAABA=</HashCode>
+      <FileName>DialogCreatorPresenter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="creatorView" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PHMI_Coursework_Forms.DialogCreator" Collapsed="true">
+    <Position X="8.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAgAAEEAACDIAxAAAgigCgAiACAoAYAFEHAEwAgAigQ=</HashCode>
+      <FileName>DialogCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
