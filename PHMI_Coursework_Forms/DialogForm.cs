@@ -111,8 +111,7 @@ namespace PHMI_Coursework_Forms
             {
                 using (var writer = System.IO.File.CreateText(save.FileName))
                 {
-                    for(int i = 0; i < listBoxProtocol.Items.Count; i++)
-                        writer.WriteLine(listBoxProtocol.Items[i].ToString());
+                    presenter.SaveHistory(save.FileName);
                 }
             }
 

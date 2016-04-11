@@ -10,6 +10,7 @@ namespace PHMI_Coursework_Forms
     class DialogPresenter
     {
         Stack<FormalModel> models = new Stack<FormalModel>();
+        DialogObserver observer = new DialogObserver();
         DialogForm dialogView;
         List<string> files = new List<string>();
         string finalPath;
@@ -31,8 +32,9 @@ namespace PHMI_Coursework_Forms
             try
             {
                 files = new List<string>();
-                Dialog dialog = Dialog.ReadFromFile(e.Path);
+                Dialog dialog = DialogXmlProvider.ReadFromFile(e.Path);
                 FormalModel currentModel = new BasicModel(dialog);
+                observer.AddModel(currentModel);
                 models.Push(currentModel);
                 dialogView.EnableControls();
                 UpdateInfo();
@@ -64,8 +66,11 @@ namespace PHMI_Coursework_Forms
             if (models.Peek().CurrentStep != null)
             {
                 if (inner != null)
-                    models.Push(inner.FormalModel != null ? (FormalModel)new GameTheoryModel(inner) : new BasicModel(inner));
-
+                {
+                    FormalModel model = inner.FormalModel != null ? (FormalModel)new GameTheoryModel(inner) : new BasicModel(inner);
+                    observer.AddModel(model);
+                    models.Push(model);
+                }
                 UpdateInfo();
             }
             else if (models.Count == 1)
@@ -91,6 +96,11 @@ namespace PHMI_Coursework_Forms
                 question += " " + new Random().Next(100000, 500000);
 
             dialogView.UpdateInfo(question, help, responses);
+        }
+
+        public void SaveHistory(string path)
+        {
+            observer.SaveToFile(path);
         }
     }
 }

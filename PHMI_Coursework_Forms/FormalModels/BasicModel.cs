@@ -28,6 +28,7 @@ namespace PHMI_Coursework_Forms
 
         public override void MakeStep(string response, out string error, out Dialog inner)
         {
+            OnStepMade(dialog.Steps[currentStep].Question, response);
             error = string.Empty;
             var allowed = dialog.Steps[currentStep].Responses;
             inner = null;
@@ -51,11 +52,5 @@ namespace PHMI_Coursework_Forms
             else
                 currentStep++;
         }
-
-        public override void MoveNext()
-        {
-            currentStep++;
-        }
-
     }
 }

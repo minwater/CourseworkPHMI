@@ -51,7 +51,7 @@ namespace PHMI_Coursework_Forms
             {
                 try
                 {
-                    inner = Dialog.ReadFromFile(openFileDialog.FileName);
+                    inner = DialogXmlProvider.ReadFromFile(openFileDialog.FileName);
                 }
                 catch (Exception ex)
                 {

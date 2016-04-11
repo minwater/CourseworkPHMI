@@ -47,9 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DialogCreatedEvent.cs" />
-    <Compile Include="DialogCreatorModel.cs" />
     <Compile Include="DialogCreatorPresenter.cs" />
     <Compile Include="DialogElements\DialogXmlProvider.cs" />
+    <Compile Include="DialogObserver.cs" />
     <Compile Include="ResponseReceivedEvent.cs" />
     <Compile Include="DialogPresenter.cs" />
     <Compile Include="DialogSelectedEvent.cs" />
